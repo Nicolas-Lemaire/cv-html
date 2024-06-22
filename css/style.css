@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Box-sizing pour inclure les marges internes et bordures dans les dimensions */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajouté pour centrer le contenu */
+    min-height: 100vh; /* Modifié pour occuper toute la hauteur de la fenêtre */
+    font-family: 'Raleway', sans-serif; /* Défini la police par défaut */
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-family: 'lato', sans-serif;
+    cursor: default;
+}
+
+/* Header et footer fixes en haut et en bas */
+header, footer {
+    background-color: #782221;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+
+/* Style du header */
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+#contact-info img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#contact-info h1, #contact-info h2 {
+    margin: 10px 0;
+}
+
+#contact-info a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+#contact-info img {
+    cursor: zoom-in;
+}
+
+#contact {
+    background-color: #2c1d27;
+    width: 100%;
+    max-width: 1160px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+/* Style du main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1160px;
+    background-color: #fff;
+    border-right: 2px solid #333;
+}
+
+#experience {
+    display: flex;
+    flex-direction: row; /* Ajustement pour mobiles */
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+#experience h2 {
+    background-color: #dbc2a4;
+    padding: 5px;
+    padding: 5px 0 5px 10px;
+
+}
+
+#experience h3 {
+    margin: 10px 0;
+}
+
+#experience ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+#post-1 {
+    flex: 1;
+    padding: 0 50px 0 0;
+    background-color: #782221;
+}
+
+#post-1 p {
+    text-indent: 20px;
+    color: #f4f4f4;
+    margin-left: 10px;
+}
+
+#post-1 ul {
+    color: #f4f4f4;
+}
+
+#post-2 {
+    flex: 2;
+    padding: 0 20px 0 10px;
+}
+
+#post-2 h2 {
+    border-left: 10px solid #782221; 
+}
+
+#post-2 section:hover {
+    border-right: 5px solid #782221; /* Ajoute un trait rouge de 5 pixels de largeur à droite de #post-2 */
+}
+#post-2 div:hover {
+    border-right: 5px solid #782221; 
+}
+
+/* Style du footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #f4f4f4;
+}
+
+footer small {
+    display: block;
+    margin-top: 10px;
+    cursor: default;
+}
+
+#icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
+}
+
+main p {
+    cursor: default;
+}
+
+#icons img:hover {
+    opacity: 0.8;
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #experience {
+        gap: 15px; /* Réduction de l'espace entre les articles */
+    }
+
+    #experience article {
+        padding: 15px;
+    }
+
+    #contact {
+        flex-direction: column; /* Affichage vertical des éléments de contact */
+        align-items: center;
+        text-align: center;
+    }
+}
